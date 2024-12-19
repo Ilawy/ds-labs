@@ -162,7 +162,9 @@ namespace dst
                     result->add(current->value);
                     current = current->prev;
                 }
-                return *result;
+                LinkedList<T> &ref = *result;
+                delete result;
+                return ref;
             }
 
             void insertAfter(T data, T after)

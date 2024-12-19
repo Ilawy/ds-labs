@@ -2,6 +2,10 @@
 #include "iostream"
 namespace list = dst::list;
 
+#ifdef wasm
+#include "../lib/wasm_exp.hh"
+#endif
+
 int main()
 {
 
@@ -19,3 +23,4 @@ int main()
     reversed.forEach([](int value, int index)
                      { std::cout << value << "\t@\t" << index << std::endl; });
 }
+
