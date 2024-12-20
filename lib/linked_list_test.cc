@@ -18,7 +18,7 @@ int main()
 
         list.forEach([](int x)
                      { std::cout << x << std::endl; });
-        std::cout << " ============= " << std::endl;
+        std::cout << "=============" << std::endl;
         list2.forEach([](int x)
                       { std::cout << x << std::endl; });
     }
