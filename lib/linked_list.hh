@@ -314,30 +314,50 @@ namespace dst
                 return result;
             }
 
-            void
-            sort()
-            {
-                bool swapped;
-                int iters = 0;
-                for (int outer = 0; outer < size - 1; outer++)
-                {
-                    swapped = false;
-                    for (int i = 0; i < size - outer - 1; i++)
-                    {
-                        iters++;
-                        Node<T> *left = this->node_at(i);
-                        Node<T> *right = this->node_at(i + 1);
-                        if (left->value > right->value)
-                        {
-                            this->swapNodes(left, right);
-                            swapped = true;
-                        }
-                    }
-                    if (!swapped)
-                        break;
-                }
-                std::cout << "finished sorting after " << iters << std::endl;
-            }
+            // void
+            // sort()
+            // {
+            //     bool swapped;
+            //     int iters = 0;
+            //     Node<T> *current = head;
+            //     Node<T> *next = head;
+            //     for (int outer = 0; outer < size - 1; outer++)
+            //     {
+            //         swapped = false;
+            //         for (int i = 0; i < size - outer - 1; i++)
+            //         {
+            //             next = next->next;
+            //             iters++;
+            //             printf("check %d > %d\n", current->value, next->value);
+            //             if (current->value > next->value)
+            //             {
+            //                 swapNodes(current, next);
+            //             }
+            //         }
+            //         if (swapped)
+            //             break;
+            //         current = current->next;
+            //         next = current;
+            //     }
+            //     // for (int outer = 0; outer < size - 1; outer++)
+            //     // {
+            //     //     swapped = false;
+            //     //     for (int i = 0; i < size - outer - 1; i++)
+            //     //     {
+            //     //         iters++;
+            //     //         Node<T> *left = this->node_at(i);
+            //     //         Node<T> *right = this->node_at(i + 1);
+            //     //         if (left->value > right->value)
+            //     //         {
+            //     //             this->swapNodes(left, right);
+            //     //             swapped = true;
+            //     //         }
+            //     //     }
+            //     //     if (!swapped)
+            //     //         break;
+            //     // }
+            //     std::cout << "finished sorting after " << iters << std::endl;
+            // }
 
             LinkedList<T> &reverse()
             {
