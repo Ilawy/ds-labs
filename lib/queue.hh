@@ -148,7 +148,8 @@ namespace dst
         }
         T value = items[front];
         if (front == rear) {
-          front = -1; // Queue is now empty
+          // Queue is now empty
+          front = -1; 
           rear = -1;
         } else {
           front = (front + 1) % size;

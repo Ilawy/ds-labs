@@ -301,6 +301,7 @@ namespace dst
             root = newRoot;
             root->left = node->left;
             root->right = node->right;
+            
             delete node;
             // printf("xx %d\n", node->data);
           }
